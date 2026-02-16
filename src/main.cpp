@@ -1,18 +1,18 @@
 #include <Arduino.h>
 
-// put function declarations here:
-int myFunction(int, int);
+// Blink LED Example
+// Turns LED on for 1 second, off for 1 second, forever
+
+int ledPin = 13;   // LED connected to digital pin 13
 
 void setup() {
-  // put your setup code here, to run once:
-  int result = myFunction(2, 3);
+  pinMode(ledPin, OUTPUT);   // set the pin as an output
 }
 
 void loop() {
-  // put your main code here, to run repeatedly:
-}
+  digitalWrite(ledPin, HIGH);  // turn LED ON
+  delay(1000);                 // wait 1000 ms = 1 second
 
-// put function definitions here:
-int myFunction(int x, int y) {
-  return x + y;
+  digitalWrite(ledPin, LOW);   // turn LED OFF
+  delay(1000);                 // wait 1 second
 }
